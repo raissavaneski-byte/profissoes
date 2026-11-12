@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psicologia — Feira de Profissões | Raissa 2º G</title>
+
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Biblioteca Chart.js para os gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Link para o arquivo CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegação principal">
+      <a href="#inicio" class="brand">
+        <span class="psi-badge" aria-hidden="true">Ψ</span>
+        <span>Psicologia</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Apresentação</a></li>
+        <li><a href="#areas">Áreas</a></li>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#mercado">Mercado</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#creditos">Créditos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. APRESENTAÇÃO DA PROFISSÃO (HOME) -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="tag">Feira de Profissões • CE Morelli</span>
+          <h1>Psicologia: <em>a ciência de compreender a mente e acolher histórias.</em></h1>
+          <p class="lead">
+            Muito além do divã, o psicólogo estuda o comportamento humano, as emoções e os processos mentais para promover saúde, equilíbrio e bem-estar em todas as fases da vida.
+          </p>
+          <div class="hero-actions">
+            <a href="#areas" class="btn btn-primary">Explorar Áreas</a>
+            <a href="#quiz" class="btn btn-outline">Testar Conhecimentos</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=800&q=80"
+            alt="Psicóloga realizando atendimento acolhedor em consultório iluminado"
+            loading="eager"
+          />
+          <figcaption>Escuta ativa, empatia e rigor científico na prática profissional.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Rotina, Atribuições e Importância Social -->
+      <div class="container cards-3">
+        <article class="info-card">
+          <h3>Rotina Profissional</h3>
+          <p>Envolve atendimentos individuais ou em grupo, aplicação de testes psicológicos, elaboração de laudos, observação comportamental e reuniões com equipes multidisciplinares.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Principais Atribuições</h3>
+          <p>Diagnosticar e prevenir transtornos emocionais, orientar escolhas vocacionais, mediar conflitos nas empresas e apoiar o desenvolvimento cognitivo na educação.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Importância Social</h3>
+          <p>Combate o estigma sobre a saúde mental, humaniza hospitais, fortalece políticas públicas no SUS e garante direitos humanos a populações vulneráveis.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- INTERATIVO: EXPLORADOR DE ÁREAS DE ATUAÇÃO -->
+    <section id="areas" class="section bg-alt">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag">Onde o psicólogo trabalha?</span>
+          <h2>Explorador de Áreas de Atuação</h2>
+          <p>Clique nas especialidades abaixo para descobrir a rotina e a média salarial de cada campo.</p>
+        </header>
+
+        <div class="area-tabs" id="areaTabs" role="tablist"></div>
+
+        <article class="area-panel" id="areaPanel" aria-live="polite">
+          <!-- Preenchido via JavaScript -->
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. FATOS HISTÓRICOS (INTEGRAÇÃO COM HISTÓRIA) -->
+    <section id="historia" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag">Integração com História</span>
+          <h2>Origens e Marcos da Psicologia</h2>
+          <p>Da filosofia antiga à ciência moderna e à regulamentação no Brasil. Clique nos marcos para expandir.</p>
+        </header>
+
+        <div class="timeline" id="timeline">
+          <article class="timeline-item active">
+            <button class="timeline-header" type="button">
+              <span class="year">1879</span>
+              <h3>O Primeiro Laboratório Científico</h3>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="timeline-body">
+              <p><strong>Wilhelm Wundt</strong> funda em Leipzig (Alemanha) o primeiro laboratório de Psicologia Experimental, separando oficialmente a Psicologia da Filosofia e da Fisiologia.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <button class="timeline-header" type="button">
+              <span class="year">1900</span>
+              <h3>O Nascimento da Psicanálise</h3>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="timeline-body">
+              <p><strong>Sigmund Freud</strong> publica <em>A Interpretação dos Sonhos</em>, revolucionando a compreensão sobre o inconsciente, os traumas e a cura pela fala.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <button class="timeline-header" type="button">
+              <span class="year">1962</span>
+              <h3>Regulamentação no Brasil (Lei nº 4.119)</h3>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="timeline-body">
+              <p>Em <strong>27 de agosto de 1962</strong>, a profissão de psicólogo é oficialmente regulamentada no Brasil — data em que se comemora o Dia do Psicólogo.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <button class="timeline-header" type="button">
+              <span class="year">2001</span>
+              <h3>Reforma Psiquiátrica e Luta Antimanicomial</h3>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="timeline-body">
+              <p>A Lei Paulo Delgado substitui o modelo manicomial por redes abertas e humanizadas, como os <strong>CAPS</strong> (Centros de Atenção Psicossocial) no SUS.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <button class="timeline-header" type="button">
+              <span class="year">Hoje</span>
+              <h3>Psicologia Digital e Neurociências</h3>
+              <span class="toggle-icon">+</span>
+            </button>
+            <div class="timeline-body">
+              <p>Regulamentação da telepsicologia pelo CFP, avanços na neuropsicologia e crescente demanda por saúde mental nas escolas e empresas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PANORAMA ATUAL E MERCADO (MATEMÁTICA, SOCIOLOGIA E GEOGRAFIA) -->
+    <section id="mercado" class="section bg-alt">
+      <div class="container">
+        <header class="section-header">
+          <span class="tag">Matemática • Sociologia • Geografia</span>
+          <h2>Panorama Atual e Mercado de Trabalho</h2>
+          <p>Dados estatísticos sobre remuneração, crescimento da categoria e distribuição regional no Brasil.</p>
+        </header>
+
+        <!-- Cards Numéricos -->
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-number">+510 mil</span>
+            <p>Psicólogos ativos registrados no Conselho Federal de Psicologia (CFP).</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">R$ 4.350</span>
+            <p>Média salarial nacional (variando de R$ 2.800 a mais de R$ 11.000 conforme a área).</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">84%</span>
+            <p>De presença feminina na profissão (recorte sociológico histórico da área).</p>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">5 anos</span>
+            <p>Duração média da graduação (Bacharelado + Formação de Psicólogo).</p>
+          </article>
+        </div>
+
+        <!-- Gráficos Interativos -->
+        <div class="charts-grid">
+          <article class="chart-box">
+            <div class="chart-header">
+              <h3>Média Salarial por Área (R$)</h3>
+              <select id="salaryFilter" aria-label="Filtrar nível de experiência">
+                <option value="pleno">Nível Pleno</option>
+                <option value="junior">Recém-formado (Júnior)</option>
+                <option value="senior">Especialista (Sênior)</option>
+              </select>
+            </div>
+            <canvas id="salaryChart"></canvas>
+          </article>
+
+          <article class="chart-box">
+            <div class="chart-header">
+              <h3>Distribuição Geográfica no Brasil (%)</h3>
+            </div>
+            <canvas id="regionChart"></canvas>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ INTERATIVO PARA OS VISITANTES DO STAND -->
+    <section id="quiz" class="section">
+      <div class="container quiz-wrapper">
+        <header class="section-header">
+          <span class="tag">Atividade do Stand</span>
+          <h2>Mito ou Verdade sobre a Psicologia?</h2>
+          <p>Teste seus conhecimentos e descubra curiosidades sobre a profissão!</p>
+        </header>
+
+        <div class="quiz-card" id="quizContainer">
+          <!-- Renderizado via JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 4. RODAPÉ / CRÉDITOS -->
+  <footer id="creditos" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="psi-badge" aria-hidden="true">Ψ</span>
+          <span>Projeto Interdisciplinar: Feira de Profissões</span>
+        </div>
+        <p>Portfólio digital desenvolvido para apresentação no stand de Psicologia.</p>
+      </div>
+
+      <div class="footer-info">
+        <h4>Ficha Técnica</h4>
+        <ul>
+          <li><strong>Aluna:</strong> Raissa</li>
+          <li><strong>Turma:</strong> 2º G</li>
+          <li><strong>Instituição:</strong> CE Morelli</li>
+          <li><strong>Disciplina:</strong> Programação</li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Links do Projeto & Referências</h4>
+        <ul>
+          <li><a href="#inicio">Voltar ao Topo ↑</a></li>
+          <li><a href="https://site.cfp.org.br/" target="_blank" rel="noopener noreferrer">Conselho Federal de Psicologia (CFP)</a></li>
+          <li><a href="https://www.crppr.org.br/" target="_blank" rel="noopener noreferrer">CRP-PR (Paraná)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 — Desenvolvido por Raissa (2º G • CE Morelli) • Disciplina de Programação</p>
+    </div>
+  </footer>
+
+  <!-- Link para o arquivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
